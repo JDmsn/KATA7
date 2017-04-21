@@ -1,0 +1,22 @@
+package kata7.model;
+
+import java.util.HashMap;
+import java.util.Set;
+
+public class Histogram <T>{
+    private final HashMap <T, Integer> map = new HashMap <>();
+    public Integer get(T key) {
+        return map.containsKey(key) ? map.get(key) : 0;
+        
+    }
+
+    public void increment (T key) {
+        map.put(key, get(key) + 1);
+        
+    }
+    
+    public Set<T> keySet() {
+        return map.keySet();
+        
+    }
+}
